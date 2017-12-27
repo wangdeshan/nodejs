@@ -9,6 +9,13 @@ import collections
 import functools
 import re
 import copy
+
+import sys
+default_encoding = 'utf-8'
+if sys.getdefaultencoding() != default_encoding:
+    reload(sys)
+    sys.setdefaultencoding(default_encoding)
+
 try:
     import json
 except ImportError:
