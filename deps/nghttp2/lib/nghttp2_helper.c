@@ -26,7 +26,7 @@
 
 #include <assert.h>
 #include <string.h>
-
+#include <arpa/inet.h>
 #include "nghttp2_net.h"
 
 void nghttp2_put_uint16be(uint8_t *buf, uint16_t n) {
