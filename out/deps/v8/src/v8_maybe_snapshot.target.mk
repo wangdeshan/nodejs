@@ -4,7 +4,7 @@ TOOLSET := target
 TARGET := v8_maybe_snapshot
 ### Rules for final target.
 $(obj).target/deps/v8/src/v8_maybe_snapshot.stamp: TOOLSET := $(TOOLSET)
-$(obj).target/deps/v8/src/v8_maybe_snapshot.stamp: $(obj).target/deps/v8/src/libv8_base.a $(obj).target/deps/v8/src/libv8_snapshot.a FORCE_DO_CMD
+$(obj).target/deps/v8/src/v8_maybe_snapshot.stamp: $(obj).target/deps/v8/src/libv8_base.a $(obj).target/deps/v8/src/libv8_init.a $(obj).target/deps/v8/src/libv8_nosnapshot.a FORCE_DO_CMD
 	$(call do_cmd,touch)
 
 all_deps += $(obj).target/deps/v8/src/v8_maybe_snapshot.stamp

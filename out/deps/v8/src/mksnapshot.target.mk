@@ -163,7 +163,3 @@ all_deps += $(builddir)/mksnapshot
 .PHONY: mksnapshot
 mksnapshot: $(builddir)/mksnapshot
 
-# Add executable to "all" target.
-.PHONY: all
-all: $(builddir)/mksnapshot
-
