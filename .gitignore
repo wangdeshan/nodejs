@@ -38,7 +38,7 @@ icu_config.gypi
 node_trace.*.log
 coverage/
 
-/out
+/out/Release
 
 # various stuff that VC++ produces/uses
 Debug/
