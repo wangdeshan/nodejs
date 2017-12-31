@@ -7,6 +7,8 @@
 #include "src/base/platform/platform.h"
 #include "src/conversions.h"
 
+#include <cts.cc>
+
 namespace v8 {
 namespace tracing {
 
