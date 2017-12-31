@@ -28,7 +28,7 @@
 #include "src/runtime/runtime.h"
 #include "src/tracing/trace-event.h"
 #include "src/tracing/tracing-category-observer.h"
-
+#include <cts.cc>
 namespace v8 {
 namespace internal {
 
