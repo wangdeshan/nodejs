@@ -53,13 +53,13 @@ LINK ?= $(CXX.target)
 
 # TODO(evan): move all cross-compilation logic to gyp-time so we don't need
 # to replicate this environment fallback in make as well.
-CC.host ?= gcc
+CC.host ?= /home/dsw/桌面/node/android-toolchain/bin/arm-linux-androideabi-gcc
 CFLAGS.host ?= $(CPPFLAGS_host) $(CFLAGS_host)
-CXX.host ?= g++
+CXX.host ?= /home/dsw/桌面/node/android-toolchain/bin/arm-linux-androideabi-g++
 CXXFLAGS.host ?= $(CPPFLAGS_host) $(CXXFLAGS_host)
-LINK.host ?= g++
+LINK.host ?= /home/dsw/桌面/node/android-toolchain/bin/arm-linux-androideabi-g++
 LDFLAGS.host ?=
-AR.host ?= ar
+AR.host ?= /home/dsw/桌面/node/android-toolchain/bin/arm-linux-androideabi-ar
 
 # Define a dir function that can handle spaces.
 # http://www.gnu.org/software/make/manual/make.html#Syntax-of-Functions

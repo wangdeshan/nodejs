@@ -1,0 +1,68 @@
+# if not file exist 'test' echo A else echo B
+
+# if [ ! -f 'test'  ]; then echo A;  else echo B; fi; 
+
+ddd(){ return; echo hhh;} ;ddd vv;
+
+iso_list() {
+	TN=$@
+	BASEPATH='/home/dsw/桌面/node'
+	FILEPATH_HS=$BASEPATH/out-linux-x86_64/Release/$TN
+	FILEPATH_DT=$BASEPATH/out/Release/$TN
+	FILEPATH_TT=$BASEPATH/out/Release/$TN-arm
+	
+	# echo $FILEPATH_HS
+	# echo $FILEPATH_DT
+	# echo $FILEPATH_TT
+	
+	if [ ! -f $FILEPATH_TT ]; then 
+		if [ -f $FILEPATH_DT ]; then 
+			cat $FILEPATH_DT >$FILEPATH_TT
+			cat $FILEPATH_HS >$FILEPATH_DT
+			echo A;  
+		else
+			echo NFD $FILEPATH_DT
+			echo B; 
+		fi
+	else 
+		if [ ! -f $FILEPATH_DT ]; then 
+			cat $FILEPATH_HS >$FILEPATH_DT
+			echo C;  
+		else
+			echo CFD $FILEPATH_DT
+			echo D; 
+		fi
+		echo xxx; 
+	fi; 
+}
+
+
+iso_list icupkg
+iso_list iculslocs
+iso_list genrb
+iso_list genccode
+iso_list mksnapshot
+
+
+# icupkg
+# cat /home/dsw/桌面/node/out/Release/icupkg >/home/dsw/桌面/node/out/Release/icupkg-arm
+# cat /home/dsw/桌面/node/out-linux-x86_64/Release/icupkg >/home/dsw/桌面/node/out/Release/icupkg
+
+# iculslocs
+# cat /home/dsw/桌面/node/out/Release/iculslocs >/home/dsw/桌面/node/out/Release/iculslocs-arm
+# cat /home/dsw/桌面/node/out-linux-x86_64/Release/iculslocs >/home/dsw/桌面/node/out/Release/iculslocs
+
+# genrb
+# cat /home/dsw/桌面/node/out/Release/genrb >/home/dsw/桌面/node/out/Release/genrb-arm
+# cat /home/dsw/桌面/node/out-linux-x86_64/Release/genrb >/home/dsw/桌面/node/out/Release/genrb
+
+# genccode
+# cat /home/dsw/桌面/node/out/Release/genccode >/home/dsw/桌面/node/out/Release/genccode-arm
+# cat /home/dsw/桌面/node/out-linux-x86_64/Release/genccode >/home/dsw/桌面/node/out/Release/genccode
+
+# mksnapshot
+# cat /home/dsw/桌面/node/out/Release/mksnapshot >/home/dsw/桌面/node/out/Release/mksnapshot-arm
+# cat /home/dsw/桌面/node/out-linux-x86_64/Release/mksnapshot >/home/dsw/桌面/node/out/Release/mksnapshot
+
+
+
