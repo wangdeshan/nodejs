@@ -9,6 +9,8 @@
 #include <set>
 #include <sstream>
 
+#include <../cts.cc>
+
 namespace node {
 namespace inspector {
 
